@@ -11,10 +11,12 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Hasnain&apos;s Resume</title> {/* Use &apos; to escape the apostrophe */}
+        <title>Hasnain's Resume</title>
       </Head>
-      <div className="flex">
-        <main className="w-3/4 p-6">
+      <div className="flex flex-col md:flex-row">
+        {/* Main content */}
+        <Sidebar />
+        <main className="w-full md:w-3/4 p-6 md: transition-all duration-300 ease-in-out">
           <Header />
           <Education />
           <Experience />
@@ -22,7 +24,8 @@ const Home: React.FC = () => {
           <Projects />
           <Contact />
         </main>
-        <Sidebar />
+
+        {/* Sidebar */}
       </div>
     </>
   );
