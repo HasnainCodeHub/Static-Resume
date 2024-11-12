@@ -7,14 +7,11 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Head from 'next/head';
 
-
-
-
 const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Hasnain's Resume</title>
+        <title>Hasnain&apos;s Resume</title> {/* Use &apos; to escape the apostrophe */}
       </Head>
       <div className="flex">
         <main className="w-3/4 p-6">
@@ -25,7 +22,7 @@ const Home: React.FC = () => {
           <Projects />
           <Contact />
         </main>
-      <Sidebar />
+        <Sidebar />
       </div>
     </>
   );
